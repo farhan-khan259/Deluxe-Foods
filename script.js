@@ -3,6 +3,8 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24));
+const progressBar = document.querySelector('.scroll-progress');
+window.addEventListener('scroll', () => { const scrollable = document.documentElement.scrollHeight - window.innerHeight; if (progressBar && scrollable > 0) progressBar.style.transform = `scaleX(${window.scrollY / scrollable})`; }, { passive: true });
 menuToggle?.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', open); document.body.classList.toggle('menu-open', open); });
 document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); menuToggle?.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); }));
 
