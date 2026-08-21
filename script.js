@@ -168,3 +168,36 @@ if (heroSlides.length > 1) {
 document.querySelectorAll('.media-fallback img').forEach((image) => {
   image.addEventListener('error', () => image.closest('.media-fallback')?.classList.add('image-unavailable'));
 });
+
+// Shared editorial motion for the homepage and About page.
+const sharedMotionTargets = document.querySelectorAll('body:not(.contract-page) .section-intro, body:not(.contract-page) .narrow, body:not(.contract-page) .mission-grid, body:not(.contract-page) .daily-copy, body:not(.contract-page) .consultation-copy, body:not(.contract-page) .labs-copy, body:not(.contract-page) .facility-copy');
+sharedMotionTargets.forEach((element) => element.classList.add('motion-reveal'));
+
+const sharedMotionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14, rootMargin: '0px 0px -40px' });
+
+sharedMotionTargets.forEach((element) => sharedMotionObserver.observe(element));
+
+const sharedReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!sharedReduceMotion) {
+  const parallaxPanels = document.querySelectorAll('.image-statement-bg, .benefit-bg, .quality-banner-bg, .about-hero-bg');
+  let sharedTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!sharedTicking) {
+      window.requestAnimationFrame(() => {
+        const scrollOffset = Math.min(window.scrollY * 0.035, 24);
+        parallaxPanels.forEach((panel) => {
+          panel.style.translate = `0 ${scrollOffset}px`;
+        });
+        sharedTicking = false;
+      });
+      sharedTicking = true;
+    }
+  }, { passive: true });
+}

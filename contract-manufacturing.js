@@ -55,3 +55,33 @@ form?.addEventListener('submit', (event) => {
     email.value = '';
   }
 });
+
+const motionTargets = document.querySelectorAll('.section-intro, .overview-image, .overview-copy, .quality-promise-copy, .contract-contact > div');
+motionTargets.forEach((element) => element.classList.add('scroll-reveal'));
+
+const motionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14, rootMargin: '0px 0px -40px' });
+
+motionTargets.forEach((element) => motionObserver.observe(element));
+
+const heroImage = document.querySelector('.contract-hero-image');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (heroImage && !reduceMotion) {
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const offset = Math.min(window.scrollY * 0.08, 42);
+        heroImage.style.transform = `scale(1.02) translate3d(0, ${offset}px, 0)`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
