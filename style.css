@@ -2,12 +2,164 @@
   width: 210px;
   height: 64px;
 }
+
+/* Final responsive and motion polish */
+.product-card {
+  animation: productCardIn 0.75s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+.product-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.product-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.product-card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.product-card:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.product-card:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.product-art:before {
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.75, 0.25, 1),
+    box-shadow 0.45s ease;
+}
+.product-card:hover .product-art:before {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 24px 38px 42px #0006;
+}
+.product-art:after {
+  transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+.product-card:hover .product-art:after {
+  transform: translateY(-8px) scale(1.04);
+}
+@keyframes productCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1100px) {
+  .nav {
+    padding-inline: 24px;
+  }
+  .nav-links {
+    gap: 20px;
+    font-size: 13px;
+  }
+  .daily-copy {
+    padding: 60px 48px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 0.8fr 1fr;
+    gap: 35px;
+  }
+}
+@media (max-width: 850px) {
+  .nav {
+    width: min(calc(100% - 40px), 1720px);
+  }
+  .nav .brand img {
+    width: 160px;
+    height: 54px;
+  }
+  .nav-links {
+    font-size: 15px;
+  }
+  .hero h1 {
+    max-width: 650px;
+  }
+  .daily-rhythm {
+    grid-template-columns: 1fr 1fr;
+  }
+  .daily-visual {
+    min-height: 560px;
+  }
+  .daily-copy {
+    padding: 52px 30px;
+  }
+  .quote-track {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .nav {
+    width: calc(100% - 28px);
+  }
+  .nav .brand img {
+    width: 150px;
+    height: 52px;
+  }
+  .hero-content {
+    padding-top: 72px;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 54px);
+  }
+  .hero-controls {
+    bottom: 20px;
+  }
+  .product-card {
+    animation-delay: 0s;
+  }
+  .product-card:nth-child(2) {
+    animation-delay: 0.08s;
+  }
+  .product-card:nth-child(3) {
+    animation-delay: 0.16s;
+  }
+  .product-card:nth-child(4) {
+    animation-delay: 0.24s;
+  }
+  .product-card:nth-child(5) {
+    animation-delay: 0.32s;
+  }
+  .product-card:nth-child(6) {
+    animation-delay: 0.4s;
+  }
+  .daily-rhythm,
+  .quote-track {
+    grid-template-columns: 1fr;
+  }
+  .daily-visual {
+    min-height: 360px;
+  }
+  .daily-copy {
+    padding: 62px 28px;
+  }
+  .quote-image {
+    order: -1;
+  }
+  .quote-image img {
+    min-height: 330px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-art:before,
+  .product-art:after {
+    animation: none;
+    transition: none;
+  }
+}
 @media (max-width: 850px) {
   .nav .brand img {
     width: 183px;
     height: 70px;
   }
 }
+
 :root {
   --ink: #1f2424;
   --forest: #194c39;
@@ -268,7 +420,7 @@ h2 {
   font-size: 13px;
 }
 .formula {
-  background: linear-gradient(145deg, #819d89, #284836);
+  background: linear-gradient(145deg, #8ca992, #315b45);
 }
 .toddler {
   background: linear-gradient(145deg, #d3a65f, #8a5028);
@@ -276,9 +428,29 @@ h2 {
 .pediatric {
   background: linear-gradient(145deg, #b58c9e, #573b67);
 }
+.kid {
+  background: linear-gradient(145deg, #b3c9b0, #587964);
+}
+.adult {
+  background: linear-gradient(145deg, #6c928b, #244f4a);
+}
+.diabetic {
+  background: linear-gradient(145deg, #c68b73, #824d43);
+}
+.maternal {
+  background: linear-gradient(145deg, #c99b91, #845d59);
+}
+.disease-specific {
+  background: linear-gradient(145deg, #83949a, #3d565d);
+}
+.disease-specific strong {
+  max-width: 150px;
+  text-align: center;
+  font-size: 30px;
+}
 .product-card h3 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
   margin-top: 20px;
 }
@@ -710,6 +882,7 @@ h2 {
   }
   .product-grid,
   .paths-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
   .product-art {
