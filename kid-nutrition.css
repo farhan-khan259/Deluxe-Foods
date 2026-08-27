@@ -1,0 +1,4 @@
+@import url('nutrition-page.css');
+.nutrition-page { --hero-image: url('assets/kidsneutrition'); }
+.nutrition-hero { --nutrition-green: #668f49; }
+.nutrition-visual { background: #b9df55; }

@@ -2,6 +2,11 @@ const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+const footerNavLinks = document.querySelectorAll('.footer-links');
+footerNavLinks.forEach((footerLinks) => {
+  footerLinks.innerHTML = '<a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#products">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="contract-manufacturing.html">Contract Manufacturing</a><a href="#contact">Contact</a><a href="#contact">Talk to us <span>↗</span></a>';
+});
+
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 50);
 });

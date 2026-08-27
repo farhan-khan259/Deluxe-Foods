@@ -1,0 +1,5 @@
+@import url('nutrition-page.css');
+.nutrition-page { --hero-image: url('assets/MaternalNutritrion.webp'); --nutrition-lime: #f0c8d0; }
+.nutrition-hero { --nutrition-green: #aa3d60; }
+.nutrition-visual { background: #f7e363; }
+.nutrition-product { border-top-color: #e5a9bb; }

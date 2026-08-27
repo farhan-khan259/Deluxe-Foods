@@ -245,6 +245,7 @@
   .infant-page .site-header { top: 14px; }
   .content-frame { width: calc(100% - 28px); }
   .formula-intro { padding: 150px 20px 72px; }
+  .formula-intro::before { background-size: auto, contain; background-repeat: no-repeat; background-position: center; }
   .formula-intro h1 { font-size: clamp(43px, 13vw, 68px); letter-spacing: -1px; }
   .formula-intro p { text-align: left; font-size: 14px; }
   .stage-section, .specialist-section { padding: 76px 0 84px; }

@@ -6,6 +6,11 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 
+const footerNavLinks = document.querySelectorAll('.footer-links');
+footerNavLinks.forEach((footerLinks) => {
+  footerLinks.innerHTML = '<a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#products">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="contract-manufacturing.html">Contract Manufacturing</a><a href="#contact">Contact</a><a href="#contact">Talk to us <span>↗</span></a>';
+});
+
 // Scroll effect for header
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {

@@ -76,14 +76,16 @@
 @media (max-width: 620px) {
   .cereal-page .site-header { top: 14px; }
   .cereal-hero { min-height: 650px; padding: 150px 24px 50px; align-items: start; }
+  .cereal-hero::before { background-size: auto, contain; background-repeat: no-repeat; background-position: center; }
   .cereal-hero h1 { font-size: clamp(63px, 18vw, 105px); }
   .cereal-hero p { max-width: 280px; font-size: 15px; }
   .hero-pack { right: 12%; bottom: 6%; width: 145px; }
   .cereal-section, .organic-section { padding-top: 78px; padding-bottom: 85px; }
   .section-intro-cereal h2 { font-size: 48px; }
-  .feature-panel { min-height: 450px; align-items: end; }
-  .feature-panel::after { background: linear-gradient(180deg, rgba(20, 59, 39, .08), rgba(20, 59, 39, .9) 57%); }
-  .feature-panel > div { width: calc(100% - 28px); margin: 0 14px 14px; padding: 24px 20px; }
+  .feature-panel { min-height: 0; display: block; overflow: visible; background: transparent; }
+  .feature-panel::after { display: none; }
+  .feature-panel > img { position: static; width: 100%; height: auto; object-fit: contain; opacity: 1; background: var(--cereal-green); }
+  .feature-panel > div { width: 100%; margin: 0; padding: 24px 20px; }
   .regular-grid, .organic-grid { grid-template-columns: 1fr; max-width: 360px; margin: auto; }
   .cereal-card img { height: 190px; }
   .organic-intro > div:last-child { padding-top: 0; }
