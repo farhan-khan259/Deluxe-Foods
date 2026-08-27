@@ -1,0 +1,267 @@
+:root {
+  --infant-deep: #123427;
+  --infant-forest: #1f5139;
+  --infant-sage: #dbe8cf;
+  --infant-lime: #d2df69;
+  --infant-paper: #f8f7f1;
+  --infant-ink: #1d2923;
+}
+
+.infant-page {
+  background: var(--infant-paper);
+  color: var(--infant-ink);
+  overflow-x: hidden;
+}
+.infant-page .site-header {
+  top: 24px;
+}
+.infant-page .nav {
+  background: rgba(255, 255, 255, .94);
+}
+.infant-page main {
+  overflow: hidden;
+}
+.formula-intro {
+  min-height: min(790px, 94vh);
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 180px 40px 110px;
+  color: #fff;
+  isolation: isolate;
+  background: var(--infant-deep);
+}
+.formula-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(90deg, rgba(12, 42, 27, .95), rgba(26, 82, 53, .66)), url("assets/infant1.webp") center/cover;
+  animation: infantHeroIn 1.2s ease both;
+}
+.formula-intro::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  bottom: -35%;
+  z-index: -1;
+  width: 55vw;
+  height: 55vw;
+  border: 1px solid rgba(219, 232, 207, .25);
+  border-radius: 50%;
+  opacity: .65;
+}
+.intro-inner {
+  width: min(980px, 100%);
+  text-align: center;
+}
+.eyebrow {
+  display: inline-block;
+  color: var(--infant-lime);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.formula-intro h1 {
+  margin: 18px auto 28px;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 8vw, 108px);
+  font-weight: 500;
+  line-height: .98;
+  letter-spacing: -2px;
+  animation: infantRise .8s .12s ease both;
+}
+.formula-intro p {
+  max-width: 870px;
+  margin: auto;
+  color: rgba(255, 255, 255, .84);
+  font-size: 16px;
+  animation: infantRise .8s .25s ease both;
+}
+.intro-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  color: var(--infant-lime);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: infantRise .8s .4s ease both;
+}
+.intro-scroll span { font-size: 18px; }
+.stage-section {
+  padding: 120px 0 130px;
+  color: #fff;
+  background: var(--infant-deep);
+}
+.content-frame {
+  width: min(calc(100% - 80px), 1160px);
+  margin: auto;
+}
+.why-panel,
+.stage-card {
+  position: relative;
+}
+.why-panel {
+  min-height: 285px;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 700px);
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 22px;
+  padding: 35px 45px;
+  border: 1px solid rgba(210, 223, 105, .32);
+  border-left: 4px solid var(--infant-lime);
+  background: linear-gradient(120deg, #1b4933, #244f38);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, .15);
+}
+.why-mark {
+  color: rgba(210, 223, 105, .28);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(70px, 10vw, 132px);
+  line-height: 1;
+}
+.why-copy {
+  width: auto;
+  padding: 0;
+  text-align: left;
+  animation: infantRise .8s ease both;
+}
+.section-number,
+.stage-label {
+  color: var(--infant-lime);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.why-copy h2,
+.specialist-heading h2,
+.care-note h2 {
+  margin: 12px 0 17px;
+  color: inherit;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+.why-copy h2 { font-size: clamp(28px, 3.5vw, 42px); }
+.why-copy p,
+.stage-list { display: grid; gap: 14px; }
+.stage-card {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  align-items: center;
+  padding: 28px 38px;
+  color: var(--infant-ink);
+  border-left: 4px solid var(--infant-lime);
+  background: #f4f6ed;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .14);
+  transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+}
+.stage-card:hover { transform: translateX(7px); background: #fff; box-shadow: 0 22px 42px rgba(0, 0, 0, .2); }
+.stage-index {
+  align-self: start;
+  color: rgba(31, 81, 57, .24);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 62px;
+  line-height: 1;
+}
+.stage-copy {
+  width: auto;
+  margin: 0;
+  padding: 0 125px 0 10px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  animation: infantRise .8s ease both;
+}
+.stage-card:nth-child(1) .stage-copy { animation-delay: .12s; }
+.stage-card:nth-child(2) .stage-copy { animation-delay: .22s; }
+.stage-card:nth-child(3) .stage-copy { animation-delay: .32s; }
+.stage-copy h3 { margin: 8px 0 16px; color: var(--infant-ink); font-size: clamp(22px, 3vw, 31px); line-height: 1.13; }
+.stage-copy p { color: #5c675f; font-size: 13px; }
+.pack {
+  position: absolute;
+  top: 50%;
+  right: 38px;
+  width: 82px;
+  height: 98px;
+  object-fit: contain;
+  margin: 0;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 12px 10px rgba(0, 0, 0, .28));
+}
+.specialist-section { padding: 125px 0 130px; background: var(--infant-paper); }
+.specialist-heading { max-width: 700px; margin: auto; text-align: center; }
+.specialist-heading h2 { color: var(--infant-ink); }
+.specialist-heading p { max-width: 550px; margin: 0 auto 56px; color: #5c675f; }
+.specialist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.specialist-card {
+  position: relative;
+  padding: 30px 25px 32px;
+  text-align: center;
+  background: #fff;
+  border-top: 4px solid var(--infant-lime);
+  box-shadow: 0 18px 42px rgba(27, 55, 36, .08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: infantRise .8s ease both;
+}
+.specialist-card:nth-child(2) { animation-delay: .12s; }
+.specialist-card:nth-child(3) { animation-delay: .24s; }
+.specialist-card:hover { transform: translateY(-8px); box-shadow: 0 26px 48px rgba(27, 55, 36, .16); }
+.product-image { height: 185px; display: grid; place-items: center; background: var(--infant-sage); }
+.product-image img { width: 116px; height: 160px; object-fit: contain; filter: drop-shadow(0 9px 8px rgba(24, 45, 29, .2)); }
+.specialist-card h3 { min-height: 50px; margin: 22px 0 13px; font-size: 16px; line-height: 1.3; }
+.specialist-card p { color: #5b665e; font-size: 12px; line-height: 1.55; }
+.care-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 55px;
+  padding: 100px max(5vw, 40px);
+  color: #fff;
+  background: linear-gradient(110deg, var(--infant-forest), #326446);
+}
+.care-note > div { max-width: 720px; }
+.care-note h2 { margin-bottom: 20px; }
+.care-note p { max-width: 620px; color: rgba(255, 255, 255, .78); }
+.care-note .button { background: var(--infant-lime); color: var(--infant-deep); }
+@keyframes infantHeroIn { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+@keyframes infantRise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 850px) {
+  .content-frame { width: min(calc(100% - 48px), 680px); }
+  .formula-intro { min-height: auto; padding: 180px 24px 100px; }
+  .formula-intro p { font-size: 15px; }
+  .specialist-grid { grid-template-columns: 1fr; max-width: 520px; margin: auto; }
+  .specialist-card h3 { min-height: auto; }
+  .care-note { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 620px) {
+  .infant-page .site-header { top: 14px; }
+  .content-frame { width: calc(100% - 28px); }
+  .formula-intro { padding: 150px 20px 72px; }
+  .formula-intro h1 { font-size: clamp(43px, 13vw, 68px); letter-spacing: -1px; }
+  .formula-intro p { text-align: left; font-size: 14px; }
+  .stage-section, .specialist-section { padding: 76px 0 84px; }
+  .why-panel { min-height: 330px; grid-template-columns: 1fr; gap: 8px; padding: 28px 22px; }
+  .why-mark { font-size: 64px; }
+  .why-copy { width: auto; padding: 0; }
+  .why-copy p, .stage-copy p { font-size: 11px; }
+  .stage-card { min-height: 340px; grid-template-columns: 58px minmax(0, 1fr); padding: 25px 18px; }
+  .stage-index { font-size: 43px; }
+  .stage-copy { padding: 0 76px 0 4px; }
+  .pack { right: 18px; width: 58px; height: 78px; }
+  .specialist-heading { padding: 0 20px; }
+  .specialist-heading p { margin-bottom: 34px; }
+  .specialist-card { padding: 22px 18px 26px; }
+  .care-note { padding: 70px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .formula-intro::before, .formula-intro h1, .formula-intro p, .intro-scroll, .why-copy, .stage-copy, .specialist-card { animation: none; }
+  .stage-card, .specialist-card { transition: none; }
+}
