@@ -2,10 +2,10 @@
   --cereal-ink: #24352a;
   --cereal-deep: #183b28;
   --cereal-green: #316348;
-  --cereal-lime: #d9e36f;
+  --cereal-lime: #9acd32;
   --cereal-cream: #f7f3e8;
-  --cereal-peach: #f0d5b5;
-  --cereal-line: rgba(217, 227, 111, .5);
+  --cereal-peach: #f5a623;
+  --cereal-line: rgba(154, 205, 50, .5);
 }
 .cereal-page { overflow-x: hidden; color: var(--cereal-ink); background: var(--cereal-cream); }
 .cereal-page .site-header { top: 24px; }
@@ -40,10 +40,10 @@
 .cereal-card:nth-child(3) { animation-delay: .24s; }
 .cereal-card:hover, .organic-card:hover { transform: translateY(-8px); box-shadow: 0 25px 45px rgba(35, 54, 37, .18); }
 .cereal-card { padding: 25px 20px 28px; }
-.card-number { position: absolute; top: 18px; left: 18px; color: #a8b65a; font-size: 11px; font-weight: 700; }
+.card-number { position: absolute; top: 18px; left: 18px; color: #7ca826; font-size: 11px; font-weight: 700; }
 .cereal-card img { width: 150px; height: 205px; object-fit: contain; margin: 0 auto 10px; filter: drop-shadow(0 13px 8px rgba(27, 49, 28, .17)); }
 .cereal-card h3, .organic-card h3 { color: var(--cereal-deep); font-size: 19px; }
-.available { display: block; margin: 11px 0 10px; color: #a4ae3f; font-size: 11px; font-weight: 700; }
+.available { display: block; margin: 11px 0 10px; color: #7ca826; font-size: 11px; font-weight: 700; }
 .format-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; }
 .format-list span, .organic-card > span { padding: 5px 13px; color: #2b3b30; background: #e3e5de; border-radius: 30px; font-size: 10px; }
 .format-list span:last-child { flex-basis: max-content; }
@@ -58,7 +58,7 @@
 .organic-image { height: 255px; display: grid; place-items: center; background: var(--cereal-peach); }
 .organic-image img { width: 175px; height: 225px; object-fit: contain; filter: drop-shadow(0 13px 8px rgba(27, 49, 28, .18)); }
 .organic-card h3 { margin: 17px 0 8px; }
-.organic-card strong { display: block; min-height: 32px; margin-bottom: 15px; color: #a4ae3f; font-size: 11px; }
+.organic-card strong { display: block; min-height: 32px; margin-bottom: 15px; color: #7ca826; font-size: 11px; }
 .cereal-cta { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding-top: 100px; padding-bottom: 100px; }
 .cereal-cta h2 { margin: 14px 0 15px; color: var(--cereal-deep); font-family: "Playfair Display", Georgia, serif; font-size: clamp(36px, 5vw, 62px); font-weight: 500; line-height: 1.02; }
 .cereal-cta p { color: #59655b; }

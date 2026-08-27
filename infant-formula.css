@@ -1,8 +1,8 @@
 :root {
   --infant-deep: #123427;
   --infant-forest: #1f5139;
-  --infant-sage: #dbe8cf;
-  --infant-lime: #d2df69;
+  --infant-sage: #eef7dc;
+  --infant-lime: #9acd32;
   --infant-paper: #f8f7f1;
   --infant-ink: #1d2923;
 }
@@ -115,11 +115,11 @@
   padding: 35px 45px;
   border: 1px solid rgba(210, 223, 105, .32);
   border-left: 4px solid var(--infant-lime);
-  background: linear-gradient(120deg, #1b4933, #244f38);
+  background: linear-gradient(120deg, #1b4933, #315d2c);
   box-shadow: 0 22px 50px rgba(0, 0, 0, .15);
 }
 .why-mark {
-  color: rgba(210, 223, 105, .28);
+  color: rgba(154, 205, 50, .28);
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(70px, 10vw, 132px);
   line-height: 1;
@@ -225,7 +225,7 @@
   gap: 55px;
   padding: 100px max(5vw, 40px);
   color: #fff;
-  background: linear-gradient(110deg, var(--infant-forest), #326446);
+  background: linear-gradient(110deg, var(--infant-forest), #4f7c2d);
 }
 .care-note > div { max-width: 720px; }
 .care-note h2 { margin-bottom: 20px; }

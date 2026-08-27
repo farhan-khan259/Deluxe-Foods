@@ -1,4 +1,4 @@
-:root { --nutrition-deep: #173b2b; --nutrition-green: #376a4a; --nutrition-lime: #d9e46e; --nutrition-paper: #f7f5ed; --nutrition-ink: #22352a; --nutrition-muted: #5e6a61; }
+:root { --nutrition-deep: #173b2b; --nutrition-green: #4f7c2d; --nutrition-lime: #9acd32; --nutrition-orange: #f5a623; --nutrition-paper: #f7f5ed; --nutrition-ink: #22352a; --nutrition-muted: #5e6a61; }
 .nutrition-page { overflow-x: hidden; background: var(--nutrition-paper); color: var(--nutrition-ink); }
 .nutrition-page .site-header { top: 24px; }
 .nutrition-page .nav { background: rgba(255,255,255,.95); }
@@ -27,7 +27,7 @@
 .nutrition-product:nth-child(2) { animation-delay: .12s; } .nutrition-product:nth-child(3) { animation-delay: .24s; }
 .nutrition-product:hover { transform: translateY(-8px); box-shadow: 0 26px 44px rgba(29,57,37,.17); }
 .nutrition-product h3 { color: var(--nutrition-deep); font-size: 21px; }
-.nutrition-product small { display: block; margin-top: 10px; color: #a3b246; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.nutrition-product small { display: block; margin-top: 10px; color: #7ca826; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
 .nutrition-product p { margin-top: 12px; color: var(--nutrition-muted); font-size: 13px; }
 .nutrition-badge { display: inline-block; margin-top: 17px; padding: 6px 13px; color: var(--nutrition-deep); background: #e4e6dd; border-radius: 30px; font-size: 10px; }
 .nutrition-cta { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: 95px max(5vw, 30px); color: #fff; background: linear-gradient(110deg, var(--nutrition-deep), var(--nutrition-green)); }

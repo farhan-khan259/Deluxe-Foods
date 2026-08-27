@@ -164,11 +164,11 @@
   --ink: #1f2424;
   --forest: #194c39;
   --forest-deep: #123427;
-  --sage: #a9c4af;
+  --sage: #9acd32;
   --paper: #fffefa;
-  --soft: #f1f1ed;
-  --sand: #e8dfd0;
-  --gold: #c89e58;
+  --soft: #f3f8e7;
+  --sand: #f8e1bc;
+  --gold: #f5a623;
 }
 * {
   box-sizing: border-box;
