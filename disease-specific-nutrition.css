@@ -1,0 +1,42 @@
+:root { --medical-deep: #193f28; --medical-green: #68bf45; --medical-yellow: #ffe95a; --medical-ink: #203429; --medical-paper: #f8f8f3; --medical-muted: #637067; }
+.medical-page { overflow-x: hidden; color: var(--medical-ink); background: var(--medical-paper); }
+.medical-page .site-header { top: 24px; }
+.medical-page .nav { background: rgba(255,255,255,.95); }
+.medical-hero { min-height: min(760px, 93vh); position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr); align-items: center; gap: 60px; padding: 165px 8vw 110px; overflow: hidden; background: var(--medical-paper); }
+.medical-hero::after { content: ""; position: absolute; right: -14vw; bottom: -32vw; width: 55vw; height: 55vw; border: 1px solid rgba(25,63,40,.13); border-radius: 50%; box-shadow: 0 0 0 50px rgba(25,63,40,.03), 0 0 0 100px rgba(25,63,40,.025); }
+.medical-hero-copy { width: 100%; margin: 0; position: relative; z-index: 1; }
+.medical-kicker, .product-number { color: #638b35; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.medical-hero h1 { margin: 18px 0 23px; color: var(--medical-deep); font-family: "Playfair Display", Georgia, serif; font-size: clamp(54px, 7vw, 105px); font-weight: 500; line-height: .92; letter-spacing: -2px; animation: medicalRise .8s ease both; }
+.medical-hero h1 em { color: #6fbf45; font-style: normal; }
+.medical-hero p { max-width: 570px; color: var(--medical-muted); font-size: 15px; animation: medicalRise .8s .16s ease both; }
+.medical-link { display: inline-flex; gap: 14px; align-items: center; margin-top: 30px; padding-bottom: 8px; border-bottom: 1px solid var(--medical-green); color: var(--medical-deep); font-size: 13px; font-weight: 700; animation: medicalRise .8s .3s ease both; }
+.medical-link span { color: #73bc43; font-size: 18px; }
+.medical-hero-art { position: relative; z-index: 1; padding: 28px; background: var(--medical-green); animation: medicalArt 1s .18s ease both; }
+.medical-hero-art img { width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 22px 16px rgba(18,57,28,.18)); }
+.medical-products { padding: 115px 0 125px; color: #fff; background: var(--medical-deep); }
+.medical-intro { margin-bottom: 65px; }
+.medical-intro h2 { max-width: 670px; margin: 14px 0 18px; color: #fff; font-family: "Playfair Display", Georgia, serif; font-size: clamp(44px, 6vw, 78px); font-weight: 500; line-height: .98; }
+.medical-intro p { max-width: 620px; color: rgba(255,255,255,.7); font-size: 15px; }
+.medical-list { display: grid; gap: 24px; }
+.medical-product { min-height: 420px; display: grid; grid-template-columns: minmax(280px, .9fr) 1.1fr; align-items: center; gap: 7%; padding: 44px 7%; overflow: hidden; animation: medicalRise .8s ease both; }
+.medical-product:nth-child(2) { animation-delay: .1s; } .medical-product:nth-child(3) { animation-delay: .2s; } .medical-product:nth-child(4) { animation-delay: .3s; }
+.medical-product-green { background: #65be43; color: var(--medical-deep); }
+.medical-product-yellow { background: var(--medical-yellow); color: var(--medical-deep); }
+.medical-product-art { display: grid; place-items: center; min-height: 310px; }
+.medical-product-art img { width: min(100%, 400px); max-height: 350px; object-fit: contain; filter: drop-shadow(0 18px 12px rgba(10,43,20,.22)); transition: transform .65s ease; }
+.medical-product:hover .medical-product-art img { transform: scale(1.04); }
+.medical-product-copy h3 { margin: 12px 0 6px; font-family: "Playfair Display", Georgia, serif; font-size: clamp(31px, 4vw, 52px); font-weight: 500; line-height: 1.02; }
+.medical-product-copy h4 { margin-bottom: 17px; font-size: 16px; }
+.medical-product-copy p { max-width: 540px; color: rgba(20,49,29,.78); font-size: 13px; }
+.medical-product-copy strong { display: block; margin-top: 18px; font-size: 15px; line-height: 1.7; }
+.product-highlight { margin-top: 18px; font-weight: 600; }
+.product-note { display: inline-block; margin-top: 22px; padding: 7px 13px; border: 1px solid rgba(20,49,29,.3); border-radius: 30px; font-size: 10px; font-weight: 700; }
+.medical-cta { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding-top: 100px; padding-bottom: 100px; }
+.medical-cta h2 { margin: 14px 0; color: var(--medical-deep); font-family: "Playfair Display", Georgia, serif; font-size: clamp(38px, 5vw, 65px); font-weight: 500; line-height: 1.02; }
+.medical-cta p { max-width: 620px; color: var(--medical-muted); }
+.medical-cta .button { color: var(--medical-deep); background: var(--medical-yellow); }
+@keyframes medicalRise { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes medicalArt { from { opacity: 0; transform: translateX(35px) rotate(2deg); } to { opacity: 1; transform: translateX(0) rotate(0); } }
+@media (max-width: 850px) { .medical-hero { grid-template-columns: 1fr; gap: 45px; padding: 160px 6vw 80px; } .medical-hero-copy { max-width: 680px; } .medical-hero-art { width: min(500px, 100%); margin: auto; } .medical-product { grid-template-columns: 1fr 1fr; padding: 35px 5%; } .medical-product-copy { order: 2; } .medical-product-art { order: 1; } .medical-cta { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .medical-page .site-header { top: 14px; } .medical-hero { padding: 145px 24px 70px; } .medical-hero h1 { font-size: clamp(54px, 15vw, 88px); } .medical-hero p { font-size: 14px; } .medical-hero-art { padding: 16px; } .medical-products { padding: 76px 0 84px; } .medical-intro { padding: 0 20px; margin-bottom: 38px; } .medical-intro h2 { font-size: 48px; } .medical-product { grid-template-columns: 1fr; gap: 15px; padding: 26px 22px 30px; } .medical-product-copy { order: 2; } .medical-product-art { order: 1; min-height: 0; } .medical-product-art img { width: 100%; max-height: none; } .medical-product-copy h3 { font-size: 38px; } .medical-cta { padding: 72px 24px; } }
+@media (prefers-reduced-motion: reduce) { .medical-hero h1, .medical-hero p, .medical-link, .medical-hero-art, .medical-product { animation: none; } .medical-product-art img { transition: none; } }
