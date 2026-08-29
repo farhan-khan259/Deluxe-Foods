@@ -1,6 +1,6 @@
 .nav .brand img {
-  width: 210px;
-  height: 64px;
+    width: 310px;
+    height: 90px;
 }
 
 /* Final responsive and motion polish */
@@ -275,7 +275,7 @@ img {
   inset: 0;
 }
 .hero-image {
-  background: url("https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=3840&q=95")
+  background: url("https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=3840&q=95")
     center/cover;
 }
 .hero-shade {
@@ -1043,10 +1043,10 @@ h2 {
   transform: scale(1);
 }
 .hero .slide-two {
-  background-image: url("https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=3840&q=95");
+  background-image: url('./assets/Heroimage1.png');
 }
 .hero .slide-three {
-  background-image: url("https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=3840&q=95");
+  background-image: url("https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=3840&q=95");
 }
 .hero-content {
   z-index: 1;
