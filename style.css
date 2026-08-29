@@ -488,7 +488,7 @@ h2 {
   inset: 0;
   background:
     linear-gradient(90deg, #14251a8f, #14251a12),
-    url("https://images.unsplash.com/photo-1542038382126-77ae2819338d?auto=format&fit=crop&w=2200&q=85")
+    url("./assets/babysleeping.jpeg")
       center 53% / cover;
 }
 .image-statement-copy {
@@ -532,7 +532,7 @@ h2 {
 .benefit-left .benefit-bg {
   background:
     linear-gradient(#1736255a, #17362572),
-    url("https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=1500&q=85")
+    url("./assets/kidsgrowth.png")
       center/cover;
 }
 .benefit-right .benefit-bg {
