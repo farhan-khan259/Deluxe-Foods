@@ -1277,13 +1277,14 @@ h2 {
 }
 /* About page */
 .about-hero {
-  height: min(820px, 94vh);
-  min-height: 690px;
+  width: 100%;
   position: relative;
-  color: #fff;
-  display: flex;
-  align-items: center;
   overflow: hidden;
+}
+.about-hero > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .about-hero-bg,
 .about-hero-shade {
@@ -1565,9 +1566,20 @@ h2 {
   }
 }
 @media (max-width: 620px) {
+  .about-page .site-header {
+    position: relative;
+    top: 0;
+    padding-top: 20px;
+  }
   .about-hero {
-    min-height: 650px;
-    height: 84vh;
+    height: 500px;
+  }
+  .about-hero > img {
+    width: auto;
+    max-width: none;
+    height: 500px;
+    object-fit: cover;
+    object-position: left top;
   }
   .about-hero h1 {
     font-size: 51px;
