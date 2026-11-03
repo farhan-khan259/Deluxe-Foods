@@ -1378,6 +1378,8 @@ h2 {
 .labs {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .facility-image {
   width: 100%;
@@ -1454,33 +1456,13 @@ h2 {
   color: #59605c;
 }
 .quality-banner {
-  height: 550px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
+  width: 100%;
+  overflow: hidden;
 }
-.quality-banner-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, #0c2d20e6, #0c2d2070),
-    url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=2400&q=85")
-      center/cover;
-}
-.quality-banner-content {
-  position: relative;
-}
-.quality-banner h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(42px, 5vw, 73px);
-  line-height: 1.08;
-  font-weight: 500;
-}
-.quality-banner p:not(.kicker) {
-  max-width: 620px;
-  margin-top: 24px;
-  color: #ffffffdc;
+.quality-banner > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .labs-copy a {
   color: var(--forest);
@@ -1627,9 +1609,6 @@ h2 {
   .process-card:last-child {
     border-bottom: 0;
   }
-  .quality-banner {
-    height: 510px;
-  }
   .commitment-grid article,
   .commitment-grid article:nth-child(3) {
     border: 0;
@@ -1764,13 +1743,11 @@ body:not(.contract-page) .about-hero-copy .button {
   box-shadow: 0 18px 35px #194c3930;
 }
 .image-statement-bg,
-.benefit-bg,
-.quality-banner-bg {
+.benefit-bg {
   transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .image-statement:hover .image-statement-bg,
-.benefit:hover .benefit-bg,
-.quality-banner:hover .quality-banner-bg {
+.benefit:hover .benefit-bg {
   transform: scale(1.045);
 }
 .button span,
@@ -1881,8 +1858,7 @@ body:not(.contract-page) .about-hero-copy .button {
   .daily-visual img,
   .product-art,
   .image-statement-bg,
-  .benefit-bg,
-  .quality-banner-bg {
+  .benefit-bg {
     transition: none;
   }
 }
