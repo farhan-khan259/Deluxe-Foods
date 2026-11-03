@@ -368,15 +368,6 @@ h2 {
 .products {
   background: var(--paper);
 }
-.products-visual {
-  width: 100%;
-  overflow: hidden;
-}
-.products-visual > img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
