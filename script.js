@@ -4,12 +4,17 @@
 const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+
+const contractLink = navLinks?.querySelector('a[href="contract-manufacturing.html"]');
+if (contractLink && !navLinks.querySelector('a[href="high-tech-lab.html"]')) {
+  contractLink.insertAdjacentHTML('beforebegin', '<a href="high-tech-lab.html">High Tech Lab</a><a href="nutraceutical.html">Nutraceutical</a><a href="probiotic.html">Probiotic</a><a href="herbal.html">Herbal</a>');
+}
 const navItems = document.querySelectorAll('.nav-links a');
 
-const footerNavLinks = document.querySelectorAll('.footer-links');
-footerNavLinks.forEach((footerLinks) => {
-  footerLinks.innerHTML = '<a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#products">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="contract-manufacturing.html">Contract Manufacturing</a><a href="#contact">Contact</a><a href="#contact">Talk to us <span>↗</span></a>';
-});
+const siteFooter = document.querySelector('body > .footer');
+if (siteFooter) {
+  siteFooter.innerHTML = '<div class="footer-grid page-frame"><div class="footer-brand"><img src="assets/delux-foods-logo.png" alt="Deluxe Foods"><p>Precision in infant nutrition.<br>Made for life\'s most important beginning.</p><div class="social-links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a></div></div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#products">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="high-tech-lab.html">High Tech Lab</a><a href="nutraceutical.html">Nutraceutical</a><a href="probiotic.html">Probiotic</a><a href="herbal.html">Herbal</a><a href="contract-manufacturing.html">Contract Manufacturing</a></div><div class="newsletter"><h3>Stay in the know</h3><p>Get Deluxe Foods news and nutrition insights.</p><form class="newsletter-form"><input type="email" aria-label="Email address" placeholder="Email address" required><button type="submit">Subscribe</button></form></div></div><div class="footer-bottom page-frame"><span>© 2026 Deluxe Foods. All rights reserved.</span><span>Made with care in Pakistan</span></div>';
+}
 
 // Scroll effect for header
 window.addEventListener('scroll', () => {
