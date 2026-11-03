@@ -1371,17 +1371,26 @@ h2 {
   margin-top: 14px;
   color: #5e655f;
 }
-.facility-story,
+.facility-story {
+  display: block;
+}
 .labs {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.facility-image,
+.facility-image {
+  width: 100%;
+  overflow: hidden;
+}
+.facility-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 .labs-image {
   min-height: 610px;
   overflow: hidden;
 }
-.facility-image img,
 .labs-image img {
   height: 100%;
   width: 100%;
@@ -1584,9 +1593,11 @@ h2 {
   .fact-row article:last-child {
     border-bottom: 0;
   }
-  .facility-image,
   .labs-image {
     min-height: 340px;
+  }
+  .facility-image {
+    min-height: 0;
   }
   .facility-copy,
   .labs-copy {
