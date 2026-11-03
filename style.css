@@ -1376,10 +1376,26 @@ h2 {
   display: block;
 }
 .labs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: block;
+  position: relative;
   padding-top: 0;
   padding-bottom: 0;
+  border-top: clamp(12px, 1.5vw, 22px) solid #f6f3ec;
+}
+.labs::before {
+  content: "";
+  position: absolute;
+  top: calc(clamp(12px, 1.5vw, 22px) * -1);
+  left: 50%;
+  width: min(180px, 38vw);
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--sage));
+  transform: translateX(-50%);
+}
+.labs > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .facility-image {
   width: 100%;
