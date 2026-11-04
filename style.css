@@ -371,6 +371,14 @@ h2 {
 .products-page .products {
   padding-top: 190px;
 }
+.products-banner {
+  margin-bottom: 58px;
+}
+.products-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -833,6 +841,12 @@ h2 {
   .page-frame {
     width: min(calc(100% - 40px), 1720px);
   }
+  .products-page .products {
+    padding-top: 125px;
+  }
+  .products-banner {
+    margin-bottom: 40px;
+  }
   .site-header {
     top: 20px;
   }
@@ -914,6 +928,12 @@ h2 {
 @media (max-width: 620px) {
   .page-frame {
     width: min(calc(100% - 28px), 1720px);
+  }
+  .products-page .products {
+    padding-top: 110px;
+  }
+  .products-banner {
+    margin-bottom: 32px;
   }
   .section {
     padding: 75px 0;
