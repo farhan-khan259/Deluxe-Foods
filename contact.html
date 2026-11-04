@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Deluxe Foods about nutrition products and contract manufacturing services.">
+  <title>Contact Us | Deluxe Foods</title>
+  <link rel="icon" type="image/png" href="assets/delux-foods-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="contact-shared.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav page-frame" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><img src="assets/delux-foods-logo.png" alt="Deluxe Foods"></a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="high-tech-lab.html">High Tech Lab</a><a href="nutraceutical.html">Nutraceutical</a><a href="probiotic.html">Probiotic</a><a href="herbal.html">Herbal</a><a href="contract-manufacturing.html">Contract Manufacturing</a><a class="active" href="contact.html">Contact</a>
+        <a class="nav-cta" href="#enquiry-form">Talk to us <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main class="contact-page">
+    <section class="contact-introduction" aria-labelledby="contact-title">
+      <a class="contact-brand" href="index.html" aria-label="Deluxe Foods home"><img src="assets/delux-foods-logo.png" alt="Deluxe Foods"></a>
+      <div class="contact-copy">
+        <p class="eyebrow">Let’s make something meaningful</p>
+        <span class="accent-line" aria-hidden="true"></span>
+        <h1 id="contact-title">Contact us</h1>
+        <p>Tell us about your next nutrition product. Our team will help you explore the possibilities.</p>
+      </div>
+    </section>
+
+    <section class="contact-form-panel" aria-labelledby="form-title">
+      <form class="enquiry-form" id="enquiry-form" novalidate>
+        <h2 id="form-title">Start a conversation</h2>
+        <div class="form-grid">
+          <div class="field">
+            <label for="full-name">Full name <span>*</span></label>
+            <input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>
+            <small class="field-error"></small>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company name">
+            <small class="field-error"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span>*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+            <small class="field-error"></small>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Include country code">
+            <small class="field-error"></small>
+          </div>
+          <div class="field field-wide">
+            <label for="service">I’m interested in <span>*</span></label>
+            <div class="select-wrap"><select id="service" name="service" required><option value="">Select a service</option><option>Contract manufacturing</option><option>Infant formula</option><option>Pediatric nutrition</option><option>Nutraceuticals</option><option>Probiotics</option><option>Herbal products</option><option>Other enquiry</option></select></div>
+            <small class="field-error"></small>
+          </div>
+          <div class="field">
+            <label for="product-type">Product type</label>
+            <input id="product-type" name="productType" type="text" placeholder="e.g. pediatric nutrition">
+            <small class="field-error"></small>
+          </div>
+          <div class="field">
+            <label for="timeline">Expected timeline</label>
+            <div class="select-wrap"><select id="timeline" name="timeline"><option value="">Select a timeline</option><option>Immediately</option><option>Within 1–3 months</option><option>Within 3–6 months</option><option>Within 6–12 months</option><option>Still exploring</option></select></div>
+            <small class="field-error"></small>
+          </div>
+          <div class="field field-wide">
+            <label for="project">Tell us about your project <span>*</span></label>
+            <textarea id="project" name="project" rows="5" placeholder="Share your idea, packaging needs, and manufacturing requirements." required></textarea>
+            <small class="field-error"></small>
+          </div>
+        </div>
+        <label class="consent" for="consent"><input id="consent" name="consent" type="checkbox" required><span class="custom-check" aria-hidden="true"></span><span>I agree to be contacted about my enquiry.</span></label>
+        <small class="consent-error" id="consent-error"></small>
+        <button class="submit-button" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+        <div class="form-meta"><span>* Required fields</span><a href="mailto:info@deluxfoods.com">info@deluxfoods.com</a></div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer" id="contact"><div class="footer-grid page-frame"><div class="footer-brand"><img src="assets/delux-foods-logo.png" alt="Deluxe Foods"><p>Precision in infant nutrition.<br>Made for life's most important beginning.</p><div class="social-links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a></div></div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="baby-cereals.html">Baby Cereals</a><a href="high-tech-lab.html">High Tech Lab</a><a href="nutraceutical.html">Nutraceutical</a><a href="probiotic.html">Probiotic</a><a href="herbal.html">Herbal</a><a href="contract-manufacturing.html">Contract Manufacturing</a><a href="contact.html">Contact</a></div><div class="newsletter"><h3>Stay in the know</h3><p>Get Deluxe Foods news and nutrition insights.</p><form class="newsletter-form"><input type="email" aria-label="Email address" placeholder="Email address" required><button type="submit">Subscribe</button></form></div></div><div class="footer-bottom page-frame"><span>© 2026 Deluxe Foods. All rights reserved.</span><span>Made with care in Pakistan</span></div></footer>
+  <script src="contact.js"></script>
+</body>
+</html>

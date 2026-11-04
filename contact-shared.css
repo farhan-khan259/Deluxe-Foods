@@ -1,0 +1,33 @@
+/* Contact-page positioning while using the homepage header and footer. */
+.contact-page {
+  padding-top: 150px;
+}
+
+.contact-page .contact-introduction,
+.contact-page .contact-form-panel {
+  min-height: calc(100vh - 150px);
+}
+
+@media (max-width: 850px) {
+  .contact-page {
+    padding-top: 112px;
+  }
+
+  .contact-page .contact-introduction {
+    min-height: 640px;
+  }
+
+  .contact-page .contact-form-panel {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-page {
+    padding-top: 100px;
+  }
+
+  .contact-page .contact-introduction {
+    min-height: 560px;
+  }
+}
