@@ -205,6 +205,82 @@ img {
   height: auto;
   display: block;
 }
+.editorial-text {
+  background: #f4f1e9;
+}
+.editorial-text-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(50px, 8vw, 140px);
+  align-items: start;
+}
+.editorial-heading h2 {
+  max-width: 650px;
+  font-size: clamp(42px, 5.2vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+.editorial-body {
+  padding-top: 35px;
+}
+.editorial-lead {
+  max-width: 700px;
+  color: #4f5854;
+  font-size: clamp(18px, 1.55vw, 24px);
+  line-height: 1.65;
+}
+.editorial-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 58px;
+  padding-top: 30px;
+  border-top: 1px solid #bfc4be;
+}
+.editorial-points span {
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.editorial-points h3 {
+  margin: 18px 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 2vw, 29px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.editorial-points p {
+  color: #5a625e;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.editorial-text-dark {
+  color: #fff;
+  background: var(--forest-deep);
+}
+.editorial-text-dark .kicker,
+.editorial-text-dark .editorial-lead {
+  color: #dbe5dd;
+}
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 38px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ffffff80;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.editorial-link span {
+  transition: transform 0.25s ease;
+}
+.editorial-link:hover span {
+  transform: translateX(5px);
+}
 .site-header {
   position: absolute;
   top: 34px;
@@ -850,6 +926,16 @@ h2 {
   .page-frame {
     width: min(calc(100% - 40px), 1720px);
   }
+  .editorial-text-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .editorial-body {
+    padding-top: 0;
+  }
+  .editorial-points {
+    margin-top: 42px;
+  }
   .products-page .products {
     padding-top: 125px;
   }
@@ -937,6 +1023,20 @@ h2 {
 @media (max-width: 620px) {
   .page-frame {
     width: min(calc(100% - 28px), 1720px);
+  }
+  .editorial-heading h2 {
+    font-size: clamp(38px, 12vw, 54px);
+  }
+  .editorial-lead {
+    font-size: 17px;
+  }
+  .editorial-points {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .editorial-points article + article {
+    padding-top: 25px;
+    border-top: 1px solid #c8ccc6;
   }
   .products-page .products {
     padding-top: 110px;
